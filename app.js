@@ -8,8 +8,11 @@ const taskList = document.getElementById("task-list");
 const delButton = document.getElementById;
 const defaultDelBtn = document.getElementsByClassName("default-del-button");
 const taskChecker = document.getElementsByClassName("task-checker");
+const taskContent = document.getElementsByClassName("task-text");
 
-//Function to create an entire new task ()
+
+//	Function to create an entire new task.
+
 function addNewTask() {
 	if (!taskList) {
 		return;
@@ -35,19 +38,30 @@ function addNewTask() {
 	newDivFlex.appendChild(newTaskContent);
 	newDivTask.appendChild(newButton);
 
+//  Function called to delete the tasks created by pressing 
+//	the "x" button.
+
 	newButton.addEventListener("click", () => 
 	{
-		delTask(newDivTask);
+		if (newDivTask) {
+			taskList.removeChild(newDivTask);
+		};
 	});
+
+	newChecker.addEventListener("change", (event) =>
+	{
+		if (newChecker.checked) {
+			newTaskContent.classList.add("task-text-checked")
+		} else {
+			newTaskContent.classList.remove("task-text-checked")
+		}
+	})
 
 	newTask.value = "";
 }
 
-function delTask(taskToDel) {
-	if (taskToDel) {
-		taskList.removeChild(taskToDel);
-	};
-}
+//  Function called when the "x" button at the default tasks 
+//  are clicked, it deletes the intire task.
 
 function delDefaultTask() {
 	for (const element of defaultDelBtn){
@@ -58,7 +72,5 @@ function delDefaultTask() {
 }
 
 function checkedStyle() {
-	if (taskChecker.checked) {
-		
-	}
+
 }
