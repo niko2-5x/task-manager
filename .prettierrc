@@ -1,0 +1,11 @@
+{
+	"tabWidth": 4,
+	"printWidth": 200,
+	"singleAttributePerLine": false,
+	"useTabs": true,
+	"semi": true,
+	"bracketSpacing": false,
+	"bracketSameLine": false,
+	"htmlWhitespaceSensitivity": "css",
+	"cursorOffset": -2
+}
