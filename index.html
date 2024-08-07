@@ -4,41 +4,9 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Task Manager</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet" />
 		<link href="./style.css" rel="stylesheet" />
 	</head>
 	<body>
-		<main class="container">
-			<section class="central-box">
-				<div class="title">
-					<h1>To-Do List</h1>
-					<i class="fa-solid fa-list"></i>
-				</div>
-				<div class="flex-button-input">
-					<button type="button" class="add-task" onclick="addNewTask()"><b>+</b></button>
-					<input type="text" placeholder="Insert new task..." id="task-input" />
-				</div>
-				<div class="tasks-list" id="task-list">
-					<div class="task">
-						<div class="task-flex">
-							<input type="checkbox" name="task-1" class="task-checker" />
-							<label for="task-1" class="task-text">Visit grandma</label>
-						</div>
-						<button type="button" class="delete-button default-del-button" onclick="delDefaultTask()">⨯</button>
-					</div>
-					<div class="task">
-						<div class="task-flex">
-							<input type="checkbox" name="task-2" class="task-checker" />
-							<label for="task-2" class="task-text-checked">Study Web Development</label>
-						</div>
-						<button type="button" class="delete-button default-del-button" onclick="delDefaultTask()">⨯</button>
-					</div>
-				</div>
-			</section>
-		</main>
-		<script src="https://kit.fontawesome.com/3ad2fe3818.js" crossorigin="anonymous"></script>
 		<script src="./app.js"></script>
 	</body>
 </html>
