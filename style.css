@@ -1,0 +1,135 @@
+body {
+	background-color: #29332e;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 24px;
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.central-box {
+	width: 100%;
+	max-width: 550px;
+	background-color: #c9cfcc;
+	padding: 40px;
+	border-radius: 10px;
+}
+
+.title {
+	display: flex;
+	flex-direction: row;
+	gap: 16px;
+	justify-content: start;
+	align-items: center;
+}
+
+.title h1 {
+	transition: 0.5s ease;
+}
+
+.title h1:hover {
+	transform: scale(1.1);
+}
+
+.flex-button-input {
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+}
+
+.flex-button-input button {
+	display: inline-block;
+	width: 46px;
+	height: 46px;
+	background-color: #599474;
+	border-radius: 50%;
+	border: 0;
+	display: flex;
+	padding-top: 3px;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	font-size: 30px;
+	transition: 0.5s ease;
+}
+
+.flex-button-input button:hover {
+	transform: scale(1.2);
+	background-color: #6ead8a;
+}
+
+.flex-button-input input {
+	width: 86%;
+	border: 0;
+	border-bottom: 2px solid #0000008f;
+	background-color: #c9cfcc;
+	font-family: "Ubuntu", sans-serif;
+	font-size: 1.5rem;
+}
+
+.flex-button-input input:focus {
+	border: 0;
+	outline: 0;
+	border-bottom: 2px solid #0000008f;
+	font-size: 1.5rem;
+}
+
+#task-list {
+	padding: 0;
+}
+
+#task-list li {
+	list-style: none;
+	padding: 12px 8px 12px 50px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+}
+
+#task-list li::before {
+	content: "";
+	position: absolute;
+	height: 28px;
+	width: 28px;
+	border-radius: 50%;
+	background-image: url(./assets/circle-regular.svg);
+	background-size: cover;
+	background-position: center;
+	top: 12px;
+	left: 8px;
+}
+
+#task-list li.checked-task {
+	color: #7d7d7d;
+	text-decoration: line-through;
+}
+
+#task-list li.checked-task::before {
+	background-image: url(./assets/circle-check-solid.svg);
+}
+
+#task-list li span {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+	line-height: 40px;
+	text-align: center;
+	border-radius: 50%;
+	transition: 0.5s ease;
+}
+
+#task-list li span:hover {
+	background-color: #29332e75;
+	transform: scale(1.2)
+}

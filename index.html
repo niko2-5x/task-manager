@@ -7,6 +7,21 @@
 		<link href="./style.css" rel="stylesheet" />
 	</head>
 	<body>
+		<main class="container">
+			<section class="central-box">
+				<div class="title">
+					<h1>To-Do List</h1>
+					<i class="fa-solid fa-list"></i>
+				</div>
+				<div class="flex-button-input">
+					<button type="button" class="add-task" onclick="addNewTask()">+</button>
+					<input type="text" placeholder="Insert new task..." id="task-input" />
+				</div>
+				<ul id="task-list">
+				</ul>
+			</section>
+		</main>
+		<script src="https://kit.fontawesome.com/3ad2fe3818.js" crossorigin="anonymous"></script>
 		<script src="./app.js"></script>
 	</body>
 </html>
